@@ -10,12 +10,11 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Ruby to D2. Convert diagrams to SVG and PNG via the compiled D2 binary."
   spec.description = spec.summary
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage = "https://github.com/dunkelziffer/r_to_d2"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.0"
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
+  spec.metadata["source_code_uri"] = spec.homepage
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -27,7 +26,7 @@ Gem::Specification.new do |spec|
     end
   end
   spec.bindir = "exe"
-  spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
+  spec.executables = ["darwin-amd64/d2", "darwin-arm64/d2", "linux-amd64/d2", "linux-arm64/d2", "windows-amd64/d2.exe", "windows-arm64/d2.exe"]
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
