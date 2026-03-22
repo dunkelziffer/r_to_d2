@@ -1,0 +1,7 @@
+bump:
+  file: lib/r_to_d2/version.rb
+  skip_ci: false
+
+release:
+  tag: true
+  push: true
