@@ -33,7 +33,7 @@ class R2D2
       "d2"
     end
 
-    root.join('exe', "#{platform}-#{arch}", executable)
+    root.join('exe', "#{platform}-#{arch}-#{executable}")
   end
 
   def self.to_svg(text)

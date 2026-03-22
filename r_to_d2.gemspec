@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
     end
   end
   spec.bindir = "exe"
-  spec.executables = ["darwin-amd64/d2", "darwin-arm64/d2", "linux-amd64/d2", "linux-arm64/d2", "windows-amd64/d2.exe", "windows-arm64/d2.exe"]
+  spec.executables = ["darwin-amd64-d2", "darwin-arm64-d2", "linux-amd64-d2", "linux-arm64-d2", "windows-amd64-d2.exe", "windows-arm64-d2.exe"]
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
