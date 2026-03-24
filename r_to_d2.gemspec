@@ -26,7 +26,8 @@ Gem::Specification.new do |s|
     .reject { |f| f == gemspec }
     .reject { |f| f.start_with?(*%w[.github/ bin/ spec/ vendor/ .gem_release.yml .gitignore .rspec Gemfile Gemfile.lock]) }
 
-  s.files = platform_independent_files << RToD2::D2Binary.relative_path
+  s.files = platform_independent_files
+  s.files << RToD2::D2Binary.relative_path if s.platform != "ruby"
   s.require_paths = ["lib"]
 
   s.bindir = "exe"

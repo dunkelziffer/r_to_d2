@@ -9,7 +9,7 @@ module RToD2
       def cpu
         case PLATFORM.cpu
         when /x86_64|x64/ then "amd64"
-        when /arm64|aarch64/ then "arm64"
+        when /arm|aarch64/ then "arm64"
         else
           raise UnsupportedPlatform, "Unsupported CPU `#{PLATFORM.cpu}`! Supported are: arm64, aarch64, x86_64, x64"
         end
