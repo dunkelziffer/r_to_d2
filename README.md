@@ -2,9 +2,13 @@
 
 THIS IS AN ALPHA RELEASE. USE AT YOUR OWN RISK.
 
-THIS SHIPS WITH GO BINARIES FOR ALL SUPPORTED PLATFORMS. IT'S AN 800MB DOWNLOAD!
+This gem ships Go executables downloaded from here: https://github.com/terrastruct/d2/releases
 
 ## Installation
+
+> :warning: If your CPU architecture or operating system isn't supported, the following
+> steps will install the gem for the `ruby` platform. That is a gem without the Go binary,
+> which raises errors on usage.
 
 Install the gem and add to the application's Gemfile by executing:
 
@@ -21,7 +25,7 @@ gem install r_to_d2
 ## Usage
 
 ```ruby
-svg_string = R2D2.to_svg('a -> b')
+svg_string = RToD2.to_svg('a -> b')
 File.open('test.svg', 'w').write(svg_string)
 ```
 
