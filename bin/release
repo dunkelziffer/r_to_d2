@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+GEM_PLATFORM=x86_64-linux rake release
+GEM_PLATFORM=arm64-linux rake release
+GEM_PLATFORM=aarch64-linux rake release
+
+GEM_PLATFORM=x86_64-darwin rake release
+GEM_PLATFORM=arm64-darwin rake release
+
+GEM_PLATFORM=x64-mingw-ucrt rake release
+GEM_PLATFORM=arm64-mingw-ucrt rake release
