@@ -1,7 +1,7 @@
 module RToD2
   class D2Binary
     D2_VERSION = "0.7.1"
-    PLATFORM = Gem::Platform.new(ENV.fetch("GEM_PLATFORM")).freeze
+    PLATFORM = (ENV.fetch("GEM_PLATFORM", nil) ? Gem::Platform.new(ENV.fetch("GEM_PLATFORM")) : Gem::Platform.local).freeze
 
     class UnsupportedPlatform < StandardError; end
 

@@ -6,7 +6,7 @@ module RToD2
 
     class << self
       def to_svg(text)
-        stdout_str, stderr_str, status = Open3.capture3(RToD2::D2Binary.absolute_path, '-', '-', stdin_data: text)
+        stdout_str, stderr_str, status = Open3.capture3(RToD2::D2Binary.absolute_path.to_s, '-', '-', stdin_data: text)
 
         if status.success?
           stdout_str
